@@ -48,7 +48,6 @@ spec:
        env:
             - name: COW_COLOR
               value: {{ .Values.cow_color | quote }}
-
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
